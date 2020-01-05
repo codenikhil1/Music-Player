@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Music Player</title>
+</head>
+<body>
+	<header>
+		<div class="icon">
+			<i class="fab fa-napster"></i>
+		</div>
+
+		<div class="search">
+			<button><i class="fas fa-search"></i></button>
+			<input type="text" name="&nbsp&nbsp&nbsp&nbsp search" placeholder="Search">
+			<i class="fas fa-bell" style="color: white"></i>
+			<img src="mypic.jpg">
+		</div>
+	</header>
+	
+	<div class="scene">
+  <div class="carousel">
+    <div class="carousel__cell">
+    	<img src="Rihanna.jpg">
+    </div>
+    <div class="carousel__cell">
+    	<img src="justin.jpg">
+    </div>
+    <div class="carousel__cell">
+    	<img src="sonu.jpg">
+    </div>
+    <div class="carousel__cell">
+    	<img src="arijit.jpg">
+    </div>
+    <div class="carousel__cell">
+    	<img src="ed.jpg">
+    </div>
+    <div class="carousel__cell">
+    	<img src="catty.jpg">
+    </div>
+  </div>
+</div>
+	<main>
+		<div class="latest">
+			<h4 class="font">Latest Release</h4>
+			<div class="music my-font">
+				<figure>
+					<img onclick="play(1);"src="perfect.jpg">
+					<figcaption>
+						<p>Perfect</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<img onclick="play(1);"src="perfect.jpg">
+					<figcaption>
+						<p>Perfect</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="perfect.jpg" onclick="play(1);">
+					<figcaption>
+						<p>Perfect</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="perfect.jpg" onclick="play(1);">
+					<figcaption>
+						<p>Perfect</p>
+					</figcaption>
+				</figure>
+				
+			</div>
+		</div>
+
+
+			<div class="popular">
+			<h4 class="font">popular Artists</h4>
+			<div class="artists my-font">
+							<figure>
+					<img src="catty.jpg">
+					<figcaption>
+						<p>Catty Perry</p>
+					</figcaption>
+				</figure>
+			<figure>
+					<img src="Arijit.jpg">
+					<figcaption>
+						<p>Arijit Singh</p>
+					</figcaption>
+				</figure>
+			<figure>
+					<img src="sonu.jpg">
+					<figcaption>
+						<p>Sonu Nigam</p>
+					</figcaption>
+				</figure>
+			<figure>
+					<img src="justin.jpg">
+					<figcaption>
+						<p>Justin Bieber</p>
+					</figcaption>
+			</figure>
+			</div>
+
+		</div>
+
+
+
+	</main>
+		<aside>
+					<h3 class="font1"><b>Queue</b></h3>
+					<div class="queue">
+						<ul>
+							<li>
+							<a href="#" onclick="playsong();">
+								<img src="perfect.jpg">
+							</a>
+							</li>
+							<li><a href="#" onclick="play(2)">
+								<img src="sonu.jpg">
+							</a></li>
+							<li><a href="#" onclick="play(3)">
+								<img src="arijit.jpg">
+							</a></li>
+							<li><a href="#" onclick="play(4)">
+								<img src="sonu.jpg">
+							</a></li>
+
+						</ul>
+
+
+					</div>
+		</aside>
+		<div class="player">
+			<div id="songtitle">Demo</div>
+			<div id="buttons">
+				<button id="pre" onclick="prevsong()"><img src="prev.png"></button>
+				<button id="play" onclick="playOrPauseSong()"><img src="play.png"></button>
+				<button id="next" onclick="nextsong()"><img src="Next.png"></button>
+
+			</div>
+
+			<div id="seekbar">
+				<div id="fill"></div>
+				
+
+			</div>
+
+		</div>
+
+<script src="myjs.js">
+	
+</script>
+</body>
+</html>

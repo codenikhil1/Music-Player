@@ -1,0 +1,345 @@
+body{
+	background-color: #0c1027;
+	  counter-reset: section;
+	  margin-bottom: 100px;
+}
+/*navigation*/
+header{
+	display: flex;
+	height: 50px;
+	width: 90%;
+}
+.icon{
+	color:coral;
+	font-size: 3rem;
+	margin-left: 20px;
+}
+.search{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: auto;
+}
+.search button{
+	background-color:transparent;
+	border: none;
+	color:white;
+    transform: translateX(70px);
+
+}
+.search input{
+	width: 300px;
+	background-color:#12193e;
+	border-radius: 10%;
+	opacity: 1;
+	height: 50%;
+	color:aliceblue;
+	border: none;
+	border-radius: 50px;
+	padding-left: 30px;
+}
+.search img{
+		border-radius: 50%;
+		background-size: contain;
+		height: 50px;
+}
+.search input,i{
+	margin-right: 40px;
+}
+
+
+/*carousel*/
+.scene{
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+	margin-left: 20%;
+margin-top: 50px;
+}
+.carousel{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	animation: rotar 15s infinite linear;
+	transform-style: preserve-3d;
+}
+.carousel:hover{
+		 animation-play-state: paused;
+}
+.carousel__cell{
+	position: absolute;
+	width: 190px;
+	height: 120px;
+	left:10px;
+	top:10px;
+}
+@keyframes rotar{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+.carousel__cell img:hover{
+	transform: scale(1.2);
+	transition: all 300ms;
+
+}
+.carousel__cell img{
+	height: 150px;
+	width: 200px;
+	image-rendering: auto;
+	transition: all 300ms;
+	border:0.5px #411e64 solid;
+	border-radius: 15px;
+}
+.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(182px);}
+.carousel__cell:nth-child(2) { transform: rotateY( 60deg) translateZ(182px); }
+.carousel__cell:nth-child(3) { transform: rotateY( 120deg) translateZ(182px); }
+.carousel__cell:nth-child(4) { transform: rotateY(180deg) translateZ(182px);}
+.carousel__cell:nth-child(5) { transform: rotateY(240deg) translateZ(182px); }
+.carousel__cell:nth-child(6) { transform: rotateY(300deg) translateZ(182px); }
+
+/*mian*/
+.font{
+	color:white;
+
+margin-top: -0.1%;
+
+margin-left: 5px;
+
+font-weight: 600;
+
+font-family: arial;
+
+font-size: 1rem;
+}
+.font1{
+	color:white;
+font-weight: 500;
+
+font-family: arial;
+
+font-size: 1rem;
+}
+.my-font{
+	font-family: sans-serif;
+}
+main{
+	position: absolute;
+	height: 100%;
+	width: 60%;
+	padding: 10px;
+	margin: 10% 0px 50px 5%;
+	
+}
+.latest{
+	position: absolute;
+	height: 30%;
+	width:95%;
+	margin:2% 0px 0px 0px;
+}
+.music img{
+	box-shadow: 9px -5px 11px -4px rgba(138,219,200,1); 
+	height: 90%;
+	width: 80%;
+	border-radius: 20%;
+	box-shadow: rgb(12,1,1);
+}
+figcaption{
+		position: absolute;
+		display: block;
+		width: 100%;
+		margin-left:16px;
+		color: white;
+}
+.music img::after{
+	content: "perfect 25 Jan 2015";
+	background-color: red;
+}
+.music{
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.music img:hover{
+	content: "perfect";
+	opacity: 0.3;
+}
+.music:hover .middle{
+	opacity: 1;
+}
+
+.popular{
+	position: absolute;
+	height: 30%;
+	width:95%;
+	margin:25% 0px 0px 0px;
+}
+.artists img{
+	border-radius: 50%;
+		height: 100px;
+		width: 100px;
+}
+.artists{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+/*aside*/
+
+aside{
+	position: absolute;
+	display: inline-block;
+	height: 130%;
+	width: 25%;
+	left:70%;
+	top:20%;
+	
+}
+.queue img{
+		width: 60px;
+		height: 60px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+}
+
+.queue ul li::before{
+	counter-increment: section;
+	content: "0" counter(section);
+	color: #a69999;
+	vertical-align: top;
+
+}
+.queue ul li::after{
+	content:"Mast Magan";
+	font-family: sans-serif;
+	color:white;
+	vertical-align: top;
+	margin-left:15px;
+
+
+}
+.queue ul li:nth-child(1)::after{
+	content: "Perfect";
+}
+.queue ul li:nth-child(2)::after{
+	content: "Believer";
+}
+.queue ul li:nth-child(3)::after{
+	content: "Raanjhana";
+}
+.queue ul li:nth-child(4)::after{
+	content: "Naan-Un";
+}
+.queue ul{
+	list-style: none;
+}
+
+/*player*/
+
+.player{
+	width: 80%;
+	height: 100px;
+	margin-left: 100px;
+	margin-right:100px;
+	position: fixed;
+	z-index: 1;
+	top:80%;
+	background-color: black;
+	opacity: 0.5;
+	border-radius: 50px;
+}
+#buttons img{
+	width: 40px;
+	height: 50px;
+	color: grey;
+	background:transparent;
+}
+#buttons button{
+background-image: linear-gradient(#f26969a3,green);
+	border:none;
+
+}
+#buttons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -35px;
+	background-color: transparent;
+
+}
+
+.pre{
+	margin-left: 30%;
+}
+#songtitle{
+	font-family: monospace;
+	color: #d91414;
+	font-size:2rem;
+	margin-top: 30px;
+	font-weight: 900; 
+}
+#seekbar{
+	width: 250px;
+	height: 5px;
+	background-color: grey;
+	margin-left:70%;
+	margin-top: -25px;
+	cursor: pointer;
+}
+#fill{
+	height: 5px;
+	background-color: red;
+	border-radius: 20px;
+}
+#handle{
+	width: 15px;
+	height: 15px;
+	margin-top: -9px;
+	margin-left: -5px;
+	background-color: blue;
+	border-radius: 50%;
+	transition: scale(2);
+}
+
+/*media*/
+@media screen and (max-width: 550px){
+	.music{
+			flex-wrap: wrap;
+	}
+	.music img{
+		height: 30px;
+		width: 30px;
+	}
+	.popular{
+		display: none;
+		flex-wrap: wrap;
+		margin-top: 70%;
+	}
+	.popular img{
+			height: 30px;
+			width: 30px;
+	}
+	#songtitle{
+		display: none;
+	}
+	#seekbar{
+		display: none;
+	}
+	aside{
+		margin-top: 150px;
+	}
+	#buttons{
+		margin-top: 25px;
+	}
+}
+
+
+
+
